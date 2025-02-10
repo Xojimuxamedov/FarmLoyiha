@@ -97,3 +97,37 @@ $titleBlue: #0e6686;
     border-radius: 10px;
   }
 }
+
+.title {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.product{
+  margin-top: 160px;
+  &-items{
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+  }
+  &-item{
+    border: 1px $black solid;
+    border-radius: 20px;
+    padding: 25px;
+    &-img{
+      display: block;
+      height: 315px;
+      margin: 0 auto;
+    }
+    &-name{
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 15px;
+     }
+    &-more{
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}

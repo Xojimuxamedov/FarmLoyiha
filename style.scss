@@ -18,7 +18,7 @@ $white: #fff;
 $titleBlue: #0e6686;
 
 .font-blue {
-  color: $titleBlue;
+  color: $titleBlack;
 }
 
 .container {
@@ -47,7 +47,7 @@ $titleBlue: #0e6686;
   &-tell {
     font-weight: 500;
     &-a:hover {
-      color: #000;
+      color: $titleBlack;
     }
   }
 }
@@ -59,7 +59,7 @@ $titleBlue: #0e6686;
   background: $blue;
 
   a {
-    color: $white;
+    color: $titleBlack;
     padding: 10px 15px;
     margin: 0 15px;
     font-size: 20px;
@@ -86,13 +86,13 @@ $titleBlue: #0e6686;
   background: $blue;
   p {
     font-size: 20px;
-    color: $white;
+    color: $titleBlack;
   }
   &-link {
     font-weight: 600;
     font-size: 18px;
     background: $white;
-    color: $blue;
+    color: $titleBlack;
     padding: 5px 20px;
     border-radius: 10px;
   }
@@ -114,7 +114,7 @@ $titleBlue: #0e6686;
     display: flex;
     flex-direction: column;
     justify-content: end;
-    
+
     border: 1px $black solid;
     border-radius: 20px;
 
@@ -140,7 +140,73 @@ $titleBlue: #0e6686;
       margin-top: 10px;
       font-size: 14px;
       font-weight: 600;
-      color: $black;
+      color: $titleBlack;
     }
+  }
+}
+
+.path {
+  margin-top: 160px;
+  &-items {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  &-item {
+    display: flex;
+    align-items: end;
+    padding: 20px 30px;
+    height: 160px;
+    border: 1px solid $black;
+    border-radius: 20px;
+    &-title {
+      font-size: 22px;
+      font-weight: 500;
+      color: $titleBlack;
+    }
+  }
+}
+
+.contact-middle {
+  margin-top: 160px;
+  background-image: url(./img/Rectangle.jpg);
+  background-size: cover;
+  height: 600px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &-title {
+    font-size: 48px;
+    color: $white;
+  }
+  &-text {
+    margin-top: 15px;
+    color: $white;
+    font-size: 28px;
+  }
+  &-links {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+  }
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    opacity: 70%;
+  }
+  &-icon{
+    transform: scale(2.8);
   }
 }

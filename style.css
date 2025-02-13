@@ -10,7 +10,7 @@
 }
 
 .font-blue {
-  color: #000;
+  color: #0e6686;
 }
 
 .container {
@@ -51,7 +51,7 @@
   background: #22ade0;
 }
 .navbar a {
-  color: #000;
+  color: #fff;
   padding: 10px 15px;
   margin: 0 15px;
   font-size: 20px;
@@ -75,13 +75,13 @@
 }
 .contact-short p {
   font-size: 20px;
-  color: #000;
+  color: #fff;
 }
 .contact-short-link {
   font-weight: 600;
   font-size: 18px;
   background: #fff;
-  color: #000;
+  color: #22ade0;
   padding: 5px 20px;
   border-radius: 10px;
 }

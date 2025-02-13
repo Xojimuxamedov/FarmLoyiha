@@ -18,7 +18,7 @@ $white: #fff;
 $titleBlue: #0e6686;
 
 .font-blue {
-  color: $titleBlack;
+  color: $titleBlue;
 }
 
 .container {
@@ -59,7 +59,7 @@ $titleBlue: #0e6686;
   background: $blue;
 
   a {
-    color: $titleBlack;
+    color: $white;
     padding: 10px 15px;
     margin: 0 15px;
     font-size: 20px;
@@ -86,13 +86,13 @@ $titleBlue: #0e6686;
   background: $blue;
   p {
     font-size: 20px;
-    color: $titleBlack;
+    color: $white;
   }
   &-link {
     font-weight: 600;
     font-size: 18px;
     background: $white;
-    color: $titleBlack;
+    color: $blue;
     padding: 5px 20px;
     border-radius: 10px;
   }
@@ -210,3 +210,4 @@ $titleBlue: #0e6686;
     transform: scale(2.8);
   }
 }
+

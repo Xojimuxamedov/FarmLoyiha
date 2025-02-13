@@ -219,31 +219,45 @@ $titleBlue: #0e6686;
 .news {
   margin-top: 160px;
   &-items {
-    @include grid(2, 2, 30, 30)
+    @include grid(2, 2, 30, 30);
   }
-  &-item{
+  &-item {
     display: flex;
     gap: 20px;
     padding-bottom: 10px;
     border-bottom: 1px dashed $black;
     position: relative;
-    &-img{
+    &-img {
       width: 200px;
       height: 180px;
     }
-    &-title{
+    &-title {
       margin-top: 8px;
       font-size: 18px;
       font-weight: bold;
     }
-    &-subtitle{
+    &-subtitle {
       margin-top: 15px;
       font-size: 16px;
       font-weight: 500;
     }
-    &-date{
+    &-date {
       position: absolute;
       bottom: 18px;
+    }
+  }
+}
+
+.certificate {
+  margin-top: 160px;
+  &-items {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-item {
+    img {
+      width: 230px;
     }
   }
 }

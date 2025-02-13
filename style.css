@@ -228,4 +228,16 @@
 .news-item-date {
   position: absolute;
   bottom: 18px;
+}
+
+.certificate {
+  margin-top: 160px;
+}
+.certificate-items {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.certificate-item img {
+  width: 230px;
 }/*# sourceMappingURL=style.css.map */

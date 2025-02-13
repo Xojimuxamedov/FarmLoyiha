@@ -21,6 +21,15 @@ $titleBlue: #0e6686;
   color: $titleBlue;
 }
 
+@mixin grid($column, $row, $columngap, $rowgap) {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+  grid-template-rows: repeat($row, 1fr);
+  grid-column-gap: $columngap + px;
+  grid-row-gap: $rowgap + px;
+}
+
 .container {
   max-width: 1520px;
   width: 100%;
@@ -47,7 +56,7 @@ $titleBlue: #0e6686;
   &-tell {
     font-weight: 500;
     &-a:hover {
-      color: #000;
+      color: $titleBlack;
     }
   }
 }
@@ -103,32 +112,176 @@ $titleBlue: #0e6686;
   font-size: 40px;
 }
 
-.product{
-  margin-top: 160px;
-  &-items{
+.product {
+  padding-top: 160px;
+  &-items {
     display: flex;
-    gap: 20px;
     margin-top: 50px;
+    justify-content: space-between;
   }
-  &-item{
+  &-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
     border: 1px $black solid;
     border-radius: 20px;
+
     padding: 25px;
-    &-img{
+
+    max-width: 300px;
+    height: 400px;
+    position: relative;
+
+    &-img {
+      max-width: 100%;
+      max-height: 100%;
+      max-height: 315px;
       display: block;
-      height: 315px;
       margin: 0 auto;
     }
-    &-name{
-      font-size: 14px;
+    &-name {
+      font-size: 16px;
       font-weight: bold;
       margin-top: 15px;
-     }
-    &-more{
-      margin-top: 8px;
+    }
+    &-more {
+      margin-top: 10px;
       font-size: 14px;
       font-weight: 600;
-      color: $black;
+      color: $titleBlack;
+    }
+  }
+}
+
+.path {
+  padding-top: 160px;
+  &-items {
+    margin-top: 50px;
+    @include grid(2, 2, 20, 20);
+  }
+  &-item {
+    display: flex;
+    align-items: end;
+    padding: 20px 30px;
+    height: 160px;
+    border: 1px solid $black;
+    border-radius: 20px;
+    &-title {
+      font-size: 22px;
+      font-weight: 500;
+      color: $titleBlack;
+    }
+  }
+}
+
+.contact-middle {
+  padding-top: 160px;
+  &-inner {
+    background-image: url(./img/Rectangle.jpg);
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-title {
+    font-size: 48px;
+    color: $white;
+  }
+  &-text {
+    margin-top: 15px;
+    color: $white;
+    font-size: 28px;
+  }
+  &-links {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+  }
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    opacity: 70%;
+  }
+  &-icon {
+    transform: scale(2.8);
+  }
+}
+
+.news {
+  padding-top: 160px;
+  &-items {
+    @include grid(2, 2, 30, 30);
+  }
+  &-item {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed $black;
+    position: relative;
+    &-img {
+      width: 200px;
+      height: 180px;
+    }
+    &-title {
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &-subtitle {
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    &-date {
+      position: absolute;
+      bottom: 18px;
+    }
+  }
+}
+
+.certificate {
+  padding-top: 160px;
+  &-items {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-item {
+    img {
+      width: 230px;
+    }
+  }
+}
+
+.footer {
+  &-line {
+    margin-top: 100px;
+    height: 20px;
+    background: $blue;
+  }
+  &-link {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    a {
+      font-size: 18px;
+      color: $titleBlue;
+      font-weight: 700;
+    }
+    a:hover {
+      color: $blueBgHover;
     }
   }
 }

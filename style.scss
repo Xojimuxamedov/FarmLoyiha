@@ -21,6 +21,15 @@ $titleBlue: #0e6686;
   color: $titleBlue;
 }
 
+@mixin grid($column, $row, $columngap, $rowgap) {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+  grid-template-rows: repeat($row, 1fr);
+  grid-column-gap: $columngap + px;
+  grid-row-gap: $rowgap + px;
+}
+
 .container {
   max-width: 1520px;
   width: 100%;
@@ -149,11 +158,7 @@ $titleBlue: #0e6686;
   margin-top: 160px;
   &-items {
     margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    @include grid(2, 2, 20, 20);
   }
   &-item {
     display: flex;
@@ -206,8 +211,39 @@ $titleBlue: #0e6686;
     background-color: #fff;
     opacity: 70%;
   }
-  &-icon{
+  &-icon {
     transform: scale(2.8);
   }
 }
 
+.news {
+  margin-top: 160px;
+  &-items {
+    @include grid(2, 2, 30, 30)
+  }
+  &-item{
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed $black;
+    position: relative;
+    &-img{
+      width: 200px;
+      height: 180px;
+    }
+    &-title{
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &-subtitle{
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    &-date{
+      position: absolute;
+      bottom: 18px;
+    }
+  }
+}

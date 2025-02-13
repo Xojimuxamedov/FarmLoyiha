@@ -131,7 +131,6 @@
 
 .path {
   padding-top: 160px;
-  margin-bottom: 160px;
 }
 .path-items {
   margin-top: 50px;
@@ -157,6 +156,9 @@
 }
 
 .contact-middle {
+  padding-top: 160px;
+}
+.contact-middle-inner {
   background-image: url(./img/Rectangle.jpg);
   background-size: cover;
   height: 600px;

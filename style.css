@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -244,23 +248,64 @@
   width: 230px;
 }
 
+.footer {
+  background-image: url(./img/Rectangle.jpg);
+  position: relative;
+}
+.footer-tel {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Markazlash */
+  display: flex;
+  gap: 20px;
+}
+.footer-tel a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.footer-container {
+  max-width: 1120px;
+  width: 100%;
+  padding: 20px 15px 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
 .footer-line {
   margin-top: 100px;
-  height: 20px;
+  height: 10px;
   background: #22ade0;
 }
 .footer-link {
-  margin: 20px 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  gap: 25px;
+  gap: 8px;
 }
 .footer-link a {
   font-size: 18px;
-  color: #0e6686;
-  font-weight: 700;
+  color: #fff;
+  font-weight: 500;
 }
 .footer-link a:hover {
-  color: #1e8ab1;
+  color: #fff;
+}
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-social-inner {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer-social-inner p {
+  color: #fff;
+}
+.footer-social-inner svg {
+  width: 25px;
+  height: 25px;
 }/*# sourceMappingURL=style.css.map */

@@ -113,7 +113,7 @@ $titleBlue: #0e6686;
 }
 
 .product {
-  margin-top: 160px;
+  padding-top: 160px;
   &-items {
     display: flex;
     margin-top: 50px;
@@ -155,7 +155,8 @@ $titleBlue: #0e6686;
 }
 
 .path {
-  margin-top: 160px;
+  padding-top: 160px;
+  margin-bottom: 160px;
   &-items {
     margin-top: 50px;
     @include grid(2, 2, 20, 20);
@@ -176,11 +177,10 @@ $titleBlue: #0e6686;
 }
 
 .contact-middle {
-  margin-top: 160px;
   background-image: url(./img/Rectangle.jpg);
   background-size: cover;
   height: 600px;
-
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,7 +217,7 @@ $titleBlue: #0e6686;
 }
 
 .news {
-  margin-top: 160px;
+  padding-top: 160px;
   &-items {
     @include grid(2, 2, 30, 30);
   }
@@ -249,7 +249,7 @@ $titleBlue: #0e6686;
 }
 
 .certificate {
-  margin-top: 160px;
+  padding-top: 160px;
   &-items {
     margin-top: 50px;
     display: flex;
@@ -258,6 +258,29 @@ $titleBlue: #0e6686;
   &-item {
     img {
       width: 230px;
+    }
+  }
+}
+
+.footer {
+  &-line {
+    margin-top: 100px;
+    height: 20px;
+    background: $blue;
+  }
+  &-link {
+    margin: 20px 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    gap: 25px;
+    a {
+      font-size: 18px;
+      color: $titleBlue;
+      font-weight: 700;
+    }
+    a:hover{
+      color: $blueBgHover;
     }
   }
 }

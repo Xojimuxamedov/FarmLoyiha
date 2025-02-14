@@ -154,8 +154,11 @@ $titleBlue: #0e6686;
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    backdrop-filter: blur(10px);
   }
   &-item {
+    background-position: center;
+    background-size: cover;
     display: flex;
     align-items: end;
     padding: 20px 30px;
@@ -163,10 +166,22 @@ $titleBlue: #0e6686;
     border: 1px solid $black;
     border-radius: 20px;
     &-title {
+      color: $white;
       font-size: 22px;
       font-weight: 500;
-      color: $titleBlack;
     }
+  }
+  &-item:nth-child(1) {
+    background-image: url(./img/Flux_Dev_A_modern_pharmaceutical_facility_under_construction_d_1.svg);
+  }
+  &-item:nth-child(2) {
+    background-image: url(./img/Flux_Dev_A_logistics_truck_arrives_at_a_modern_pharmaceutical__3.svg);
+  }
+  &-item:nth-child(3) {
+    background-image: url(./img/Flux_Dev_Inside_a_sterile_welllit_cleanroom_technicians_in_ful_2.svg);
+  }
+  &-item:nth-child(4) {
+    background-image: url(./img/Flux_Dev_In_a_modern_professional_office_setting_a_government__2.svg);
   }
 }
 
@@ -206,8 +221,7 @@ $titleBlue: #0e6686;
     background-color: #fff;
     opacity: 70%;
   }
-  &-icon{
+  &-icon {
     transform: scale(2.8);
   }
 }
-

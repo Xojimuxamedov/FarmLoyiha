@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +23,15 @@ $titleBlue: #0e6686;
 
 .font-blue {
   color: $titleBlue;
+}
+
+@mixin grid($column, $row, $columngap, $rowgap) {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+  grid-template-rows: repeat($row, 1fr);
+  grid-column-gap: $columngap + px;
+  grid-row-gap: $rowgap + px;
 }
 
 .container {
@@ -104,7 +117,7 @@ $titleBlue: #0e6686;
 }
 
 .product {
-  margin-top: 160px;
+  padding-top: 160px;
   &-items {
     display: flex;
     margin-top: 50px;
@@ -146,15 +159,10 @@ $titleBlue: #0e6686;
 }
 
 .path {
-  margin-top: 160px;
+  padding-top: 160px;
   &-items {
     margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    backdrop-filter: blur(10px);
+    @include grid(2, 2, 20, 20);
   }
   &-item {
     background-position: center;
@@ -186,15 +194,16 @@ $titleBlue: #0e6686;
 }
 
 .contact-middle {
-  margin-top: 160px;
-  background-image: url(./img/Rectangle.jpg);
-  background-size: cover;
-  height: 600px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding-top: 160px;
+  &-inner {
+    background-image: url(./img/Rectangle.jpg);
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
   &-title {
     font-size: 48px;
@@ -223,5 +232,112 @@ $titleBlue: #0e6686;
   }
   &-icon {
     transform: scale(2.8);
+  }
+}
+.news {
+  padding-top: 160px;
+  &-items {
+    @include grid(2, 2, 30, 30);
+  }
+  &-item {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed $black;
+    position: relative;
+    &-img {
+      width: 200px;
+      height: 180px;
+    }
+    &-title {
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &-subtitle {
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    &-date {
+      position: absolute;
+      bottom: 18px;
+    }
+  }
+}
+
+.certificate {
+  padding-top: 160px;
+  &-items {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-item {
+    img {
+      width: 230px;
+    }
+  }
+}
+
+.footer {
+  background-image: url(./img/Rectangle.jpg);
+  position: relative;
+  &-tel{
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Markazlash */
+    display: flex;
+    gap: 20px;
+    a{
+      color: $white;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+  &-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 20px 15px 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-line {
+    margin-top: 100px;
+    height: 10px;
+    background: $blue;
+  }
+  &-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    a {
+      font-size: 18px;
+      color: $white;
+      font-weight: 500;
+    }
+    a:hover {
+      color: $white;
+    }
+  }
+  &-social{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &-inner{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      p{
+        color: $white;
+      }
+      svg{
+        width: 25px;
+        height: 25px;
+      }
+    }
   }
 }

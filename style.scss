@@ -268,25 +268,43 @@ $titleBlue: #0e6686;
 }
 
 .footer {
-  background-image: url(./img/Rectangle.jpg);
+  background-image: url(./img/Flux_Dev_A_modern_sleek_and_welllit_industrial_facility_with_s_3\ 1.jpg);
+  background-position:center;
+  background-size: cover;
   position: relative;
-  &-tel{
+  &-infos {
     position: absolute;
-    bottom: 6px;
+    bottom: 26px;
     left: 50%;
     transform: translate(-50%, -50%); /* Markazlash */
     display: flex;
-    gap: 20px;
-    a{
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    &-img{
+      position: absolute;
+      top: -200px;
+      width: 70px;
+      height: 70px;
+    }
+    &-tels {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    &-tel {
       color: $white;
       font-size: 18px;
       font-weight: 600;
     }
   }
-  &-container{
+  &-container {
     max-width: 1120px;
     width: 100%;
-    padding: 20px 15px 80px;
+    padding: 20px 15px 120px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -300,31 +318,41 @@ $titleBlue: #0e6686;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
     a {
       font-size: 18px;
       color: $white;
       font-weight: 500;
     }
-    a:hover {
-      color: $white;
-    }
   }
-  &-social{
+  &-social {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    &-inner{
+    align-items: start;
+    gap: 3px;
+    &-inner {
       display: flex;
       align-items: center;
-      gap: 15px;
-      p{
+      gap: 5px;
+      p {
         color: $white;
+        font-weight: 600;
       }
-      svg{
-        width: 25px;
-        height: 25px;
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
       }
     }
+  }
+  &-company{
+    background: #0000008e;
+    padding: 7px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: $white;
   }
 }

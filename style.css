@@ -65,8 +65,53 @@ html {
   background: #1e8ab1;
 }
 
-.carausel-img {
+.carousel {
+  position: relative;
+  overflow: hidden;
   width: 100%;
+}
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+  min-width: 100%;
+  width: 100%;
+  height: 80vh;
+  box-sizing: border-box;
+  background: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-item img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  bottom: 0px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-control-prev {
+  left: 48%;
+}
+
+.carousel-control-next {
+  right: 48%;
 }
 
 .contact-short {
@@ -144,8 +189,6 @@ html {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
 }
 .path-item {
   background-position: center;

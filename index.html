@@ -83,19 +83,36 @@
       </div>
 
       <nav class="navbar">
-        <a href="#help">Bosh sahifa</a>
-        <a href="#">Biz haqimizda </a>
-        <a href="#">Mahsulotlar</a>
-        <a href="#">Yangiliklar</a>
-        <a href="#">Bog'lanish</a>
+        <a href="#home">Bosh sahifa</a>
+        <a href="/about">Biz haqimizda</a>
+        <a href="#product">Mahsulotlar</a>
+        <a href="#contact">Bog'lanish</a>
+        <a href="#news">Yangiliklar</a>
       </nav>
-      <div class="carausel">
-        <img
-          class="carausel-img"
-          src="/img/1734906120503336960_c5058654bdf9d4b0465d74d8fc8cfaac.webp"
-          alt="carausel-1"
-        />
+
+
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/1734906120503336960_9c91aa3f7824a7fdcc01871f7780cb2c.webp" alt="Image 1" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/1734906120503336960_b1bd6fdd4b0c4ca7b0eb3647e45de471.webp" alt="Image 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/1734906120503336960_c5058654bdf9d4b0465d74d8fc8cfaac.webp" alt="Image 3" />
+          </div>
+        </div>
+        <button class="carousel-control-prev" onclick="prevSlide()">
+          &#10094;
+        </button>
+        <button class="carousel-control-next" onclick="nextSlide()">
+          &#10095;
+        </button>
       </div>
+
+
+
       <div class="contact-short">
         <p class="contact-short-p">
           Qo'shimcha malumotlarni bilish uchun biz bilan bog'laning
@@ -198,7 +215,6 @@
             <div class="contact-middle-link">
               <i class="contact-middle-icon fa-light fa-headset fa-2xl"></i>
             </div>
-            
           </div>
         </div>
       </section>
@@ -334,11 +350,21 @@
       <div class="footer-line"></div>
       <div class="footer-infos">
         <div class="footer-info">
-          <img class="footer-info-img" src="./img/130.png" alt="farm loyiha logo">
-          <p class="footer-info-location footer-info-tel">Toshkent shaxar, Yunusobod tumani, Bobodexqon mahallasi 48 uy </p>
+          <img
+            class="footer-info-img"
+            src="./img/130.png"
+            alt="farm loyiha logo"
+          />
+          <p class="footer-info-location footer-info-tel">
+            Toshkent shaxar, Yunusobod tumani, Bobodexqon mahallasi 48 uy
+          </p>
           <div class="footer-info-tels">
-            <a class="footer-info-tel" href="tel:+998996511111"> Tel: +998996511111 </a>
-            <a class="footer-info-tel" href="tel:+998998045040"> Tel: +998998045040 </a>
+            <a class="footer-info-tel" href="tel:+998996511111">
+              Tel: +998996511111
+            </a>
+            <a class="footer-info-tel" href="tel:+998998045040">
+              Tel: +998998045040
+            </a>
           </div>
         </div>
       </div>
@@ -373,8 +399,12 @@
           </a>
         </div>
       </div>
-      <hr>
-      <p class="footer-company">"FARM LOYIHA" mas`uliyati cheklangan jamiyati</p>
+      <hr />
+      <p class="footer-company">
+        "FARM LOYIHA" mas`uliyati cheklangan jamiyati
+      </p>
     </footer>
+
+    <script src="main.js"></script>
   </body>
 </html>

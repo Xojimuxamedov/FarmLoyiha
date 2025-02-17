@@ -45,22 +45,25 @@ $titleBlue: #0e6686;
   display: flex;
   align-items: center;
   padding: 5px 0;
-  &-logo {
-    margin-right: 10px;
-    img {
-      height: 80px;
-      width: 80px;
-    }
-  }
-  &-text {
-    font-weight: 600;
+
     display: flex;
-    flex-direction: column;
-  }
-  &-tell {
-    font-weight: 500;
-    &-a:hover {
-      color: $titleBlack;
+    align-items: center;
+    justify-content: space-between;
+    &-logo{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &-logoImg{
+      img{
+        width: 70px;
+        height: 70px;
+      }
+    }
+    &-navbar{
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
   }
 }
@@ -225,16 +228,16 @@ $titleBlue: #0e6686;
     }
   }
   &-item:nth-child(1) {
-    background-image: url(./img/Flux_Dev_A_modern_pharmaceutical_facility_under_construction_d_1.svg);
+    background-image: url(./img/Clip-path-group-2.svg);
   }
   &-item:nth-child(2) {
-    background-image: url(./img/Flux_Dev_A_logistics_truck_arrives_at_a_modern_pharmaceutical__3.svg);
+    background-image: url(./img/Clip-path-group-1.svg);
   }
   &-item:nth-child(3) {
-    background-image: url(./img/Flux_Dev_Inside_a_sterile_welllit_cleanroom_technicians_in_ful_2.svg);
+    background-image: url(./img/Clip-path-group.svg);
   }
   &-item:nth-child(4) {
-    background-image: url(./img/Flux_Dev_In_a_modern_professional_office_setting_a_government__2.svg);
+    background-image: url(./img/Clip-path-group-3.svg);
   }
 }
 

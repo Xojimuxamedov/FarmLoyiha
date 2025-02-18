@@ -2,11 +2,16 @@ html {
   scroll-behavior: smooth;
 }
 
+// body{
+//   position: relative;
+// }
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
+  border: none;
 
   font-family: "Roboto", serif;
   font-optical-sizing: auto;
@@ -23,6 +28,11 @@ $titleBlue: #0e6686;
 
 .font-blue {
   color: $titleBlue;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 40px;
 }
 
 @mixin grid($column, $row, $columngap, $rowgap) {
@@ -42,49 +52,66 @@ $titleBlue: #0e6686;
 }
 
 .headerup {
-  display: flex;
-  align-items: center;
-  padding: 5px 0;
-
+  &-first {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    &-logo{
+    padding: 5px 0;
+    &-outside {
+      background: $titleBlue;
+    }
+    &-info {
+      color: $white;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    &-mail {
       display: flex;
       align-items: center;
       gap: 10px;
     }
-    &-logoImg{
-      img{
+    &-mailText {
+      color: $white;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  &-second {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-outside {
+      background: $blue;
+    }
+    &-logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    &-logoImg {
+      img {
         width: 70px;
         height: 70px;
       }
     }
-    &-navbar{
+    &-title {
+      color: $white;
+      font-size: 26px;
+    }
+    &-navbar {
       display: flex;
       align-items: center;
-      gap: 10px;
+      a {
+        padding: 30px 14px;
+        font-size: 18px;
+        color: $white;
+      }
+      a:hover {
+        background-color: $titleBlue;
+      }
     }
   }
 
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: $blue;
-
-  a {
-    color: $white;
-    padding: 10px 15px;
-    margin: 0 15px;
-    font-size: 20px;
-    font-weight: 500;
-  }
-  a:hover {
-    background: $blueBgHover;
-  }
-}
 
 .carousel {
   position: relative;
@@ -157,11 +184,74 @@ $titleBlue: #0e6686;
     padding: 5px 20px;
     border-radius: 10px;
   }
-}
 
-.title {
-  font-weight: 600;
-  font-size: 40px;
+  ////////
+
+  &-outer {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 4;
+  }
+  &-out {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    ///////
+    &-inner {
+      background: lightblue;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: 400px;
+      padding: 20px 40px;
+      background: $blueBgHover;
+    }
+
+    &-tels {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-tel {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 10px;
+      a {
+        font-size: 16px;
+        color: $white;
+      }
+    }
+    &-info {
+      font-size: 16px;
+      color: $white;
+      width: 250px;
+    }
+
+    &-socials {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      display: flex;
+      gap: 20px;
+    }
+    &-social {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      p {
+        font-size: 16px;
+        color: $white;
+      }
+    }
+  }
 }
 
 .product {
@@ -218,12 +308,12 @@ $titleBlue: #0e6686;
     display: flex;
     align-items: end;
     padding: 20px 30px;
-    height: 160px;
+    height: 220px;
     border: 1px solid $black;
     border-radius: 20px;
     &-title {
       color: $white;
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 500;
     }
   }
@@ -238,6 +328,46 @@ $titleBlue: #0e6686;
   }
   &-item:nth-child(4) {
     background-image: url(./img/Clip-path-group-3.svg);
+  }
+}
+
+.pathFixed {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  background: $white;
+  width: 700px;
+  border-radius: 20px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  &-up {
+    background-image: url(./img/Clip-path-group-2.svg);
+    height: 160px;
+    background-position: center;
+    background-size: cover;
+    padding: 30px 50px 20px ;
+    display: flex;
+    align-items: end;
+    border-radius: 20px 20px 0 0;
+  }
+  &-text {
+    padding: 30px 50px;
+  }
+  &-title{
+    color: $white;
+    font-size: 36px;
+  }
+  &-out{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 4;
   }
 }
 

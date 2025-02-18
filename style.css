@@ -35,7 +35,11 @@ html {
   align-items: center;
   justify-content: space-between;
   padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .headerup-first-outside {
   background: #0e6686;
 }
@@ -371,11 +375,11 @@ html {
   border-radius: 20px;
   width: 200px;
   height: 200px;
-  background-color: #fff;
-  opacity: 70%;
+  background-color: rgba(173, 173, 173, 0.5882352941);
 }
 .contact-middle-icon {
   transform: scale(2.8);
+  color: #fff;
 }
 
 .news {

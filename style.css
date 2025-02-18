@@ -28,24 +28,23 @@ html {
   display: flex;
   align-items: center;
   padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .headerup-logo {
-  margin-right: 10px;
-}
-.headerup-logo img {
-  height: 80px;
-  width: 80px;
-}
-.headerup-text {
-  font-weight: 600;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
-.headerup-tell {
-  font-weight: 500;
+.headerup-logoImg img {
+  width: 70px;
+  height: 70px;
 }
-.headerup-tell-a:hover {
-  color: #000;
+.headerup-navbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .navbar {
@@ -251,11 +250,11 @@ html {
   border-radius: 20px;
   width: 200px;
   height: 200px;
-  background-color: #fff;
-  opacity: 70%;
+  background-color: rgba(173, 173, 173, 0.5882352941);
 }
 .contact-middle-icon {
   transform: scale(2.8);
+  color: #fff;
 }
 
 .news {

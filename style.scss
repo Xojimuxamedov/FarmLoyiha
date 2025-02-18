@@ -66,7 +66,7 @@ $titleBlue: #0e6686;
       gap: 10px;
     }
   }
-}
+
 
 .navbar {
   display: flex;
@@ -275,11 +275,12 @@ $titleBlue: #0e6686;
     border-radius: 20px;
     width: 200px;
     height: 200px;
-    background-color: #fff;
-    opacity: 70%;
+    background-color: #adadad96;
+    // opacity: 70%;
   }
   &-icon {
     transform: scale(2.8);
+    color: $white;
   }
 }
 .news {

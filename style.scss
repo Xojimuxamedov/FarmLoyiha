@@ -21,10 +21,10 @@ html {
 
 $blue: #22ade0;
 $blueBgHover: #1e8ab1;
-$black: #000;
+$black: #222 ;
 $titleBlack: #000;
 $white: #fff;
-$titleBlue: #0e6686;
+$titleBlue: #1e8ab1;
 
 .font-blue {
   color: $titleBlue;
@@ -210,7 +210,7 @@ $titleBlue: #0e6686;
       justify-content: space-between;
       gap: 20px;
       width: 400px;
-      padding: 20px 40px;
+      padding: 30px 50px;
       background: $blueBgHover;
     }
 

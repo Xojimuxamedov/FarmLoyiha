@@ -19,7 +19,6 @@ const data = {
   ],
 };
 
-
 let currentIndex = 0;
 const slides = document.querySelectorAll(".carousel-item");
 const totalSlides = slides.length;
@@ -53,7 +52,6 @@ function prevSlide() {
 // Funksiyalarni global qilish (HTML da `onclick` ishlashi uchun)
 window.nextSlide = nextSlide;
 window.prevSlide = prevSlide;
-
 
 const contactBox = document.getElementById("contactBox");
 const contactButton = document.querySelector(".contact-short-link");
@@ -99,3 +97,36 @@ window.addEventListener("click", (e) => {
     document.body.style.overflow = "";
   }
 });
+
+// data
+
+// AIzaSyDrGZ6slE-EuG78m_KKjlBUNI2oz50So2A
+
+const SPREADSHEET_ID = "1n9vdGQx7uvnJKqgvNrE4cf-l0mBDCaL8_KEPp6cn1FU";
+const API_KEY = "AIzaSyDrGZ6slE-EuG78m_KKjlBUNI2oz50So2A";
+const SHEET_NAME = "Sheet1"; // Sahifa nomi (o'zgartirishingiz mumkin)
+
+const URL = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
+
+
+fetch(URL)
+  .then(response => response.json())
+  .then(data => {
+    const values = data.values; 
+    if (!values || values.length < 2) {
+      console.error("Yetarli ma'lumot yo'q!");
+      return;
+    }
+    
+    const headers = values[0]; // Birinchi qatorni array nomi sifatida olish
+    const formattedData = values.slice(1).map(row => {
+      let obj = {};
+      row.forEach((value, index) => {
+        obj[headers[index]] = value || ""; // Agar qiymat bo‘sh bo‘lsa, uni "" qilish
+      });
+      return obj;
+    });
+
+    console.log(formattedData);
+  })
+  .catch(error => console.error("Xatolik:", error));

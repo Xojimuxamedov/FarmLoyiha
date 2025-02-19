@@ -15,7 +15,7 @@ html {
 }
 
 .font-blue {
-  color: #0e6686;
+  color: #1e8ab1;
 }
 
 .title {
@@ -37,7 +37,7 @@ html {
   padding: 5px 0;
 }
 .headerup-first-outside {
-  background: #0e6686;
+  background: #1e8ab1;
 }
 .headerup-first-info {
   color: #fff;
@@ -85,7 +85,7 @@ html {
   color: #fff;
 }
 .headerup-second-navbar a:hover {
-  background-color: #0e6686;
+  background-color: #1e8ab1;
 }
 
 .carousel {
@@ -181,7 +181,7 @@ html {
   justify-content: space-between;
   gap: 20px;
   width: 400px;
-  padding: 20px 40px;
+  padding: 30px 50px;
   background: #1e8ab1;
 }
 .contact-short-out-tels {
@@ -234,7 +234,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  border: 1px #000 solid;
+  border: 1px #222 solid;
   border-radius: 20px;
   padding: 25px;
   max-width: 300px;
@@ -279,7 +279,7 @@ html {
   align-items: end;
   padding: 20px 30px;
   height: 220px;
-  border: 1px solid #000;
+  border: 1px solid #222;
   border-radius: 20px;
 }
 .path-item-title {
@@ -394,7 +394,7 @@ html {
   display: flex;
   gap: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px dashed #000;
+  border-bottom: 1px dashed #222;
   position: relative;
 }
 .news-item-img {

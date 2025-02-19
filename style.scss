@@ -21,10 +21,10 @@ html {
 
 $blue: #22ade0;
 $blueBgHover: #1e8ab1;
-$black: #000;
+$black: #222 ;
 $titleBlack: #000;
 $white: #fff;
-$titleBlue: #0e6686;
+$titleBlue: #1e8ab1;
 
 .font-blue {
   color: $titleBlue;
@@ -208,7 +208,7 @@ $titleBlue: #0e6686;
       justify-content: space-between;
       gap: 20px;
       width: 400px;
-      padding: 20px 40px;
+      padding: 30px 50px;
       background: $blueBgHover;
     }
 
@@ -221,7 +221,7 @@ $titleBlue: #0e6686;
       display: flex;
       align-items: center;
       gap: 5px;
-      margin-top: 10px;
+      margin-top: 15px;
       a {
         font-size: 16px;
         color: $white;
@@ -231,6 +231,7 @@ $titleBlue: #0e6686;
       font-size: 16px;
       color: $white;
       width: 250px;
+      margin-bottom: 15px;
     }
 
     &-socials {

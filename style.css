@@ -193,7 +193,7 @@ html {
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .contact-short-out-tel a {
   font-size: 16px;
@@ -203,6 +203,7 @@ html {
   font-size: 16px;
   color: #fff;
   width: 250px;
+  margin-bottom: 15px;
 }
 .contact-short-out-socials {
   display: flex;

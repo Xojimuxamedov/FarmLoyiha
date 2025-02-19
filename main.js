@@ -19,28 +19,41 @@ const data = {
   ],
 };
 
+
 let currentIndex = 0;
 const slides = document.querySelectorAll(".carousel-item");
 const totalSlides = slides.length;
+const carouselInner = document.querySelector(".carousel-inner");
+
+let slideInterval = setInterval(nextSlide, 5000); // Avtomatik aylanish intervali
 
 function showSlide(index) {
-  const carouselInner = document.querySelector(".carousel-inner");
   const offset = -index * 100;
   carouselInner.style.transform = `translateX(${offset}%)`;
+}
+
+// Intervalni yangilash funksiyasi
+function resetInterval() {
+  clearInterval(slideInterval); // Eski intervalni to‘xtatish
+  slideInterval = setInterval(nextSlide, 5000); // Yangi intervalni boshlash
 }
 
 function nextSlide() {
   currentIndex = (currentIndex + 1) % totalSlides;
   showSlide(currentIndex);
+  resetInterval(); // Har safar o'tkazishda vaqtni yangilash
 }
 
 function prevSlide() {
   currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
   showSlide(currentIndex);
+  resetInterval(); // Har safar o'tkazishda vaqtni yangilash
 }
 
-// Avtomatik aylanish
-setInterval(nextSlide, 5000);
+// Funksiyalarni global qilish (HTML da `onclick` ishlashi uchun)
+window.nextSlide = nextSlide;
+window.prevSlide = prevSlide;
+
 
 const contactBox = document.getElementById("contactBox");
 const contactButton = document.querySelector(".contact-short-link");

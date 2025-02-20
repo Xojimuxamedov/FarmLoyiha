@@ -106,27 +106,41 @@ const SPREADSHEET_ID = "1n9vdGQx7uvnJKqgvNrE4cf-l0mBDCaL8_KEPp6cn1FU";
 const API_KEY = "AIzaSyDrGZ6slE-EuG78m_KKjlBUNI2oz50So2A";
 const SHEET_NAME = "Sheet1"; // Sahifa nomi (o'zgartirishingiz mumkin)
 
+const newsImg = document.querySelectorAll(".news-item-img");
+const newsTitle = document.querySelectorAll(".news-item-title");
+const newsText = document.querySelectorAll(".news-item-subtitle");
+const newsDate = document.querySelectorAll(".news-item-date");
 const URL = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
 
 
+let formattedData;
 fetch(URL)
-  .then(response => response.json())
-  .then(data => {
-    const values = data.values; 
+  .then((response) => response.json())
+  .then((data) => {
+    const values = data.values;
     if (!values || values.length < 2) {
       console.error("Yetarli ma'lumot yo'q!");
       return;
     }
-    
+
     const headers = values[0]; // Birinchi qatorni array nomi sifatida olish
-    const formattedData = values.slice(1).map(row => {
+    const lastFourRows = values.slice(-4); // Oxirgi 4 ta qatorni olish
+
+    formattedData = lastFourRows.map((row) => {
       let obj = {};
       row.forEach((value, index) => {
         obj[headers[index]] = value || ""; // Agar qiymat bo‘sh bo‘lsa, uni "" qilish
       });
       return obj;
     });
-
-    console.log(formattedData);
+    console.log(newsImg);
+    
+    
+    formattedData.reverse().forEach((e, i) => {
+      newsImg[i].src = e.img;
+      newsTitle[i].innerHTML = e.title;
+      newsText[i].innerHTML = e.text;
+      newsDate[i].innerHTML = e.date;
+    });
   })
-  .catch(error => console.error("Xatolik:", error));
+  .catch((error) => console.error("Xatolik:", error));

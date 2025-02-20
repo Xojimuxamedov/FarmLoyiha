@@ -412,6 +412,7 @@ $titleBlue: #1e8ab1;
     color: $white;
   }
 }
+
 .news {
   padding-top: 160px;
   &-items {
@@ -424,8 +425,11 @@ $titleBlue: #1e8ab1;
     border-bottom: 1px dashed $black;
     position: relative;
     &-img {
+      display: block;
       width: 200px;
-      height: 180px;
+      height: 170px;
+      background-size: cover;
+      background-position: center;
     }
     &-title {
       margin-top: 8px;

@@ -397,8 +397,11 @@ html {
   position: relative;
 }
 .news-item-img {
+  display: block;
   width: 200px;
-  height: 180px;
+  height: 170px;
+  background-size: cover;
+  background-position: center;
 }
 .news-item-title {
   margin-top: 8px;

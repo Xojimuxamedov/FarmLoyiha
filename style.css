@@ -430,6 +430,10 @@ html {
   width: 230px;
 }
 
+.map-location {
+  padding-top: 160px;
+}
+
 .footer {
   background-image: url(./img/Flux_Dev_A_modern_sleek_and_welllit_industrial_facility_with_s_3\ 1.jpg);
   background-position: center;

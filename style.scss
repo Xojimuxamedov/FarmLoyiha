@@ -2,11 +2,16 @@ html {
   scroll-behavior: smooth;
 }
 
+// body{
+//   position: relative;
+// }
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
+  border: none;
 
   font-family: "Roboto", serif;
   font-optical-sizing: auto;
@@ -16,13 +21,18 @@ html {
 
 $blue: #22ade0;
 $blueBgHover: #1e8ab1;
-$black: #000;
+$black: #222 ;
 $titleBlack: #000;
 $white: #fff;
-$titleBlue: #0e6686;
+$titleBlue: #1e8ab1;
 
 .font-blue {
   color: $titleBlue;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 40px;
 }
 
 @mixin grid($column, $row, $columngap, $rowgap) {
@@ -42,52 +52,115 @@ $titleBlue: #0e6686;
 }
 
 .headerup {
-  display: flex;
-  align-items: center;
-  padding: 5px 0;
-  &-logo {
-    margin-right: 10px;
-    img {
-      height: 80px;
-      width: 80px;
+  &-first {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    &-outside {
+      background: $titleBlue;
+    }
+    &-info {
+      color: $white;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    &-mail {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &-mailText {
+      color: $white;
+      font-size: 16px;
+      font-weight: 400;
     }
   }
-  &-text {
-    font-weight: 600;
+  &-second {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &-outside {
+      background: $blue;
+    }
+    &-logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    &-logoImg {
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    &-title {
+      color: $white;
+      font-size: 26px;
+    }
+    &-navbar {
+      display: flex;
+      align-items: center;
+      a {
+        padding: 30px 14px;
+        font-size: 18px;
+        color: $white;
+      }
+      a:hover {
+        background-color: $titleBlue;
+      }
+    }
   }
-  &-tell {
-    font-weight: 500;
-    &-a:hover {
-      color: $titleBlack;
+}
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  &-item {
+    min-width: 100%;
+    width: 100%;
+    height: 80vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
     }
   }
 }
 
-.navbar {
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $blue;
-
-  a {
-    color: $white;
-    padding: 10px 15px;
-    margin: 0 15px;
-    font-size: 20px;
-    font-weight: 500;
-  }
-  a:hover {
-    background: $blueBgHover;
-  }
+  padding: 10px;
+  bottom: 0px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
-.carausel {
-  &-img {
-    width: 100%;
-  }
+.carousel-control-prev {
+  left: 48%;
 }
+
+.carousel-control-next {
+  right: 48%;
+}
+//////////////////////////////
 
 .contact-short {
   display: flex;
@@ -109,11 +182,75 @@ $titleBlue: #0e6686;
     padding: 5px 20px;
     border-radius: 10px;
   }
-}
 
-.title {
-  font-weight: 600;
-  font-size: 40px;
+  ////////
+
+  &-outer {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 4;
+  }
+  &-out {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    ///////
+    &-inner {
+      background: lightblue;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: 400px;
+      padding: 30px 50px;
+      background: $blueBgHover;
+    }
+
+    &-tels {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-tel {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 15px;
+      a {
+        font-size: 16px;
+        color: $white;
+      }
+    }
+    &-info {
+      font-size: 16px;
+      color: $white;
+      width: 250px;
+      margin-bottom: 15px;
+    }
+
+    &-socials {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      display: flex;
+      gap: 20px;
+    }
+    &-social {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      p {
+        font-size: 16px;
+        color: $white;
+      }
+    }
+  }
 }
 
 .product {
@@ -165,17 +302,71 @@ $titleBlue: #0e6686;
     @include grid(2, 2, 20, 20);
   }
   &-item {
+    background-position: center;
+    background-size: cover;
     display: flex;
     align-items: end;
     padding: 20px 30px;
-    height: 160px;
+    height: 220px;
     border: 1px solid $black;
     border-radius: 20px;
     &-title {
-      font-size: 22px;
+      color: $white;
+      font-size: 26px;
       font-weight: 500;
-      color: $titleBlack;
     }
+  }
+  &-item:nth-child(1) {
+    background-image: url(./img/Clip-path-group-2.svg);
+  }
+  &-item:nth-child(2) {
+    background-image: url(./img/Clip-path-group-1.svg);
+  }
+  &-item:nth-child(3) {
+    background-image: url(./img/Clip-path-group.svg);
+  }
+  &-item:nth-child(4) {
+    background-image: url(./img/Clip-path-group-3.svg);
+  }
+}
+
+.pathFixed {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  background: $white;
+  width: 700px;
+  border-radius: 20px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  &-up {
+    background-image: url(./img/Clip-path-group-2.svg);
+    height: 160px;
+    background-position: center;
+    background-size: cover;
+    padding: 30px 50px 20px;
+    display: flex;
+    align-items: end;
+    border-radius: 20px 20px 0 0;
+  }
+  &-text {
+    padding: 30px 50px;
+  }
+  &-title {
+    color: $white;
+    font-size: 36px;
+  }
+  &-out {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 4;
   }
 }
 
@@ -213,11 +404,12 @@ $titleBlue: #0e6686;
     border-radius: 20px;
     width: 200px;
     height: 200px;
-    background-color: #fff;
-    opacity: 70%;
+    background-color: #adadad96;
+    // opacity: 70%;
   }
   &-icon {
     transform: scale(2.8);
+    color: $white;
   }
 }
 
@@ -233,8 +425,11 @@ $titleBlue: #0e6686;
     border-bottom: 1px dashed $black;
     position: relative;
     &-img {
+      display: block;
       width: 200px;
-      height: 180px;
+      height: 170px;
+      background-size: cover;
+      background-position: center;
     }
     &-title {
       margin-top: 8px;
@@ -269,7 +464,7 @@ $titleBlue: #0e6686;
 
 .footer {
   background-image: url(./img/Flux_Dev_A_modern_sleek_and_welllit_industrial_facility_with_s_3\ 1.jpg);
-  background-position:center;
+  background-position: center;
   background-size: cover;
   position: relative;
   &-infos {
@@ -284,7 +479,7 @@ $titleBlue: #0e6686;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    &-img{
+    &-img {
       position: absolute;
       top: -200px;
       width: 70px;
@@ -346,7 +541,7 @@ $titleBlue: #0e6686;
       }
     }
   }
-  &-company{
+  &-company {
     background: #0000008e;
     padding: 7px;
     text-align: center;

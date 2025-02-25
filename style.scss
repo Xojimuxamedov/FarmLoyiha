@@ -21,7 +21,7 @@ html {
 
 $blue: #22ade0;
 $blueBgHover: #1e8ab1;
-$black: #222 ;
+$black: #222;
 $titleBlack: #000;
 $white: #fff;
 $titleBlue: #1e8ab1;
@@ -462,8 +462,8 @@ $titleBlue: #1e8ab1;
   }
 }
 
-.map{
-  &-location{
+.map {
+  &-location {
     padding-top: 160px;
   }
 }
@@ -554,5 +554,53 @@ $titleBlue: #1e8ab1;
     font-size: 16px;
     font-weight: 400;
     color: $white;
+  }
+}
+
+.aboutUs {
+  padding: 30px 50px;
+  // border-radius: 30px;
+  &-body{
+    background-color: rgb(218, 218, 218)
+  }
+  &-title {
+    color: $blueBgHover;
+    margin-bottom: 30px;
+    &-small {
+      margin: 20px 0;
+      color: $blueBgHover;
+      font-size: 22px;
+    }
+  }
+  &-info {
+    &-li {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    &-dot {
+      width: 8px;
+      height: 8px;
+      background: $black;
+      display: block;
+      border-radius: 50%;
+    }
+  }
+  &-images {
+    @include grid(3, 0, 30, 0);
+    &-inner {
+      height: 220px;
+      background-position: center;
+      background-size: cover;
+    }
+    &-inner:nth-child(1) {
+      background-image: url(./img/Clip-path-group-1.svg);
+    }
+    &-inner:nth-child(2) {
+      background-image: url(./img/Clip-path-group-1.svg);
+    }
+    &-inner:nth-child(3) {
+      background-image: url(./img/Clip-path-group-1.svg);
+    }
   }
 }

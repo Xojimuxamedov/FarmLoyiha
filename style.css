@@ -521,4 +521,54 @@ html {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
+}
+
+.aboutUs {
+  padding: 30px 50px;
+}
+.aboutUs-body {
+  background-color: rgb(218, 218, 218);
+}
+.aboutUs-title {
+  color: #1e8ab1;
+  margin-bottom: 30px;
+}
+.aboutUs-title-small {
+  margin: 20px 0;
+  color: #1e8ab1;
+  font-size: 22px;
+}
+.aboutUs-info-li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.aboutUs-info-dot {
+  width: 8px;
+  height: 8px;
+  background: #222;
+  display: block;
+  border-radius: 50%;
+}
+.aboutUs-images {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(0, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+}
+.aboutUs-images-inner {
+  height: 220px;
+  background-position: center;
+  background-size: cover;
+}
+.aboutUs-images-inner:nth-child(1) {
+  background-image: url(./img/Clip-path-group-1.svg);
+}
+.aboutUs-images-inner:nth-child(2) {
+  background-image: url(./img/Clip-path-group-1.svg);
+}
+.aboutUs-images-inner:nth-child(3) {
+  background-image: url(./img/Clip-path-group-1.svg);
 }/*# sourceMappingURL=style.css.map */

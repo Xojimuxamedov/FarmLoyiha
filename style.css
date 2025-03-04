@@ -523,15 +523,22 @@ html {
   color: #fff;
 }
 
-.aboutUs {
-  padding: 30px 50px;
+.aboutUs-out {
+  background-color: #fff;
+}
+.aboutUs-bottom {
+  padding: 0px 50px 30px;
+  display: flex;
+  gap: 30px;
+  background-color: #fff;
 }
 .aboutUs-body {
   background-color: rgb(218, 218, 218);
 }
 .aboutUs-title {
   color: #1e8ab1;
-  margin-bottom: 30px;
+  padding: 30px 0;
+  text-align: center;
 }
 .aboutUs-title-small {
   margin: 20px 0;
@@ -571,4 +578,35 @@ html {
 }
 .aboutUs-images-inner:nth-child(3) {
   background-image: url(./img/Clip-path-group-1.svg);
+}
+
+.contactUs-title {
+  background: #a7a7a7;
+  padding: 5px 10px;
+}
+.contactUs-input {
+  margin-top: 10px;
+}
+.contactUs-input-name {
+  font-size: 12px;
+}
+.contactUs-input-box {
+  font-size: 14px;
+  width: 200px;
+  border: 1px solid #222;
+  border-radius: 5px;
+  padding: 7px 10px;
+  margin-top: 3px;
+}
+.contactUs-submit {
+  padding: 7px 12px;
+  background-color: #22ade0;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contactUs-submit:hover {
+  background-color: #1e8ab1;
 }/*# sourceMappingURL=style.css.map */

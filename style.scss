@@ -558,14 +558,22 @@ $titleBlue: #1e8ab1;
 }
 
 .aboutUs {
-  padding: 30px 50px;
-  // border-radius: 30px;
-  &-body{
-    background-color: rgb(218, 218, 218)
+  &-out {
+    background-color: #fff;
+  }
+  &-bottom {
+    padding: 0px 50px 30px;
+    display: flex;
+    gap: 30px;
+    background-color: #fff;
+  }
+  &-body {
+    background-color: rgb(218, 218, 218);
   }
   &-title {
     color: $blueBgHover;
-    margin-bottom: 30px;
+    padding: 30px 0;
+    text-align: center;
     &-small {
       margin: 20px 0;
       color: $blueBgHover;
@@ -601,6 +609,38 @@ $titleBlue: #1e8ab1;
     }
     &-inner:nth-child(3) {
       background-image: url(./img/Clip-path-group-1.svg);
+    }
+  }
+}
+.contactUs {
+  &-title {
+    background: #a7a7a7;
+    padding: 5px 10px;
+  }
+  &-input {
+    margin-top: 10px;
+    &-name {
+      font-size: 12px;
+    }
+    &-box {
+      font-size: 14px;
+      width: 200px;
+      border: 1px solid $black;
+      border-radius: 5px;
+      padding: 7px 10px;
+      margin-top: 3px;
+    }
+  }
+  &-submit {
+    padding: 7px 12px;
+    background-color: $blue;
+    color: $white;
+    font-size: 14px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: $blueBgHover;
     }
   }
 }

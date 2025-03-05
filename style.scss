@@ -310,10 +310,11 @@ $titleBlue: #1e8ab1;
     height: 220px;
     border: 1px solid $black;
     border-radius: 20px;
+
     &-title {
       color: $white;
-      font-size: 26px;
-      font-weight: 500;
+      font-size: 28px;
+      font-weight: 600;
     }
   }
   &-item:nth-child(1) {

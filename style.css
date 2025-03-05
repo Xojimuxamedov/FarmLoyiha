@@ -283,8 +283,8 @@ html {
 }
 .path-item-title {
   color: #fff;
-  font-size: 26px;
-  font-weight: 500;
+  font-size: 28px;
+  font-weight: 600;
 }
 .path-item:nth-child(1) {
   background-image: url(./img/Flux_Dev_A_modern_pharmaceutical_facility_under_construction_d_1.jpg);
@@ -571,13 +571,13 @@ html {
   background-size: cover;
 }
 .aboutUs-images-inner:nth-child(1) {
-  background-image: url(./img/Clip-path-group-1.svg);
+  background-image: url(./img/Flux_Dev_A_logistics_truck_arrives_at_a_modern_pharmaceutical__3.jpg);
 }
 .aboutUs-images-inner:nth-child(2) {
-  background-image: url(./img/Clip-path-group-1.svg);
+  background-image: url(./img/Flux_Dev_A_logistics_truck_arrives_at_a_modern_pharmaceutical__3.jpg);
 }
 .aboutUs-images-inner:nth-child(3) {
-  background-image: url(./img/Clip-path-group-1.svg);
+  background-image: url(./img/Flux_Dev_A_logistics_truck_arrives_at_a_modern_pharmaceutical__3.jpg);
 }
 
 .contactUs-title {

@@ -12,10 +12,10 @@ const data = {
     "Dori vositalarini davlat ro‘yxatidan o‘tkazish jarayonlarini boshqarish dori vositalarining xavfsizligi va samaradorligini ta’minlashda muhim rol o‘ynaydi. Dori vositalarini ro‘yxatga olish jarayoni ishlab chiqaruvchidan bozorga chiqishdan oldin mahsulotning barcha jihatlarini, jumladan, sifat nazorati, klinik sinovlar, xavfsizlikni va samaradorlikni tekshirishni talab qiladi. Ro‘yxatga olish jarayoni barcha qonuniy talablarga javob berishini va dori vositasining bozor uchun zarur xavfsizlik va samaradorlik standartlariga javob berishini ta’minlaydi. Davlat ro‘yxatidan o‘tkazish jarayoni dori vositasining qaysi tartibda va qanday shartlarda ishlab chiqarilishi va tarqatilishi mumkinligini belgilaydi. Dori vositasining ro‘yxatdan o‘tishi uning xalqaro bozorga kirishi va bemorlar uchun xavfsiz foydalanishni ta’minlash uchun zarurdir. Bu jarayonni to‘g‘ri va o‘z vaqtida amalga oshirish mahsulotning muvaffaqiyatli tarqatilishini va bozorga chiqishini ta’minlaydi.",
   ],
   img: [
-    "./img/Clip-path-group-2.svg",
-    "./img/Clip-path-group-1.svg",
-    "./img/Clip-path-group.svg",
-    "./img/Clip-path-group-3.svg",
+    "./img/Flux_Dev_A_modern_pharmaceutical_facility_under_construction_d_1.jpg",
+    "./img/Flux_Dev_A_logistics_truck_arrives_at_a_modern_pharmaceutical__3.jpg",
+    "./img/Flux_Dev_Inside_a_sterile_welllit_cleanroom_technicians_in_ful_2.jpg",
+    "./img/Clip\ path\ group.jpg",
   ],
 };
 

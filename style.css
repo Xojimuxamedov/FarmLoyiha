@@ -14,6 +14,10 @@ html {
   font-variation-settings: "wdth" 100;
 }
 
+.pt-150 {
+  padding-top: 150px;
+}
+
 .font-blue {
   color: #1e8ab1;
 }
@@ -336,6 +340,36 @@ html {
           backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.2);
   z-index: 4;
+}
+
+.homeAbout-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.homeAbout-subtitle {
+  margin-top: 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.homeAbout-text {
+  line-height: 28px;
+  font-weight: 400;
+  margin-top: 15px;
+  width: 700px;
+}
+.homeAbout-link {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  letter-spacing: 2px;
+  display: block;
+  width: -moz-min-content;
+  width: min-content;
+}
+.homeAbout-right {
+  width: 750px;
+  height: 500px;
+  background-image: url(./img/2009.jpg);
 }
 
 .contact-middle {

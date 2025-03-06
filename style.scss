@@ -26,6 +26,10 @@ $titleBlack: #000;
 $white: #fff;
 $titleBlue: #1e8ab1;
 
+.pt-150 {
+  padding-top: 150px;
+}
+
 .font-blue {
   color: $titleBlue;
 }
@@ -367,6 +371,37 @@ $titleBlue: #1e8ab1;
     backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.2);
     z-index: 4;
+  }
+}
+
+.homeAbout {
+   &-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-subtitle {
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &-text {
+    line-height: 28px;
+    font-weight: 400;
+    margin-top: 15px;
+    width: 700px;
+  }
+  &-link {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    letter-spacing: 2px;
+    display: block;
+    width: min-content;
+  }
+  &-right {
+    width: 750px ;
+    height: 500px;
+    background-image: url(./img/2009.jpg);
   }
 }
 

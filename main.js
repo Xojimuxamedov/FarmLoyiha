@@ -15,7 +15,7 @@ const data = {
     "./img/Flux_Dev_A_modern_pharmaceutical_facility_under_construction_d_1.jpg",
     "./img/Flux_Dev_A_logistics_truck_arrives_at_a_modern_pharmaceutical__3.jpg",
     "./img/Flux_Dev_Inside_a_sterile_welllit_cleanroom_technicians_in_ful_2.jpg",
-    "./img/Clip\ path\ group.jpg",
+    "./img/Clip path group.jpg",
   ],
 };
 
@@ -98,6 +98,16 @@ window.addEventListener("click", (e) => {
   }
 });
 
+let hamburger = document.querySelector(".headerup-second-hamburgerMenu");
+let nav = document.querySelector(".headerup-second-navbar")
+
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("headerup-second-navbar-active")
+  hamburger.classList.toggle("active")
+});
+
+
+
 // data
 
 // AIzaSyDrGZ6slE-EuG78m_KKjlBUNI2oz50So2A
@@ -111,7 +121,6 @@ const newsTitle = document.querySelectorAll(".news-item-title");
 const newsText = document.querySelectorAll(".news-item-subtitle");
 const newsDate = document.querySelectorAll(".news-item-date");
 const URL = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
-
 
 let formattedData;
 fetch(URL)
@@ -134,8 +143,7 @@ fetch(URL)
       return obj;
     });
     console.log(newsImg);
-    
-    
+
     formattedData.reverse().forEach((e, i) => {
       newsImg[i].src = e.img;
       newsTitle[i].innerHTML = e.title;
@@ -144,3 +152,4 @@ fetch(URL)
     });
   })
   .catch((error) => console.error("Xatolik:", error));
+

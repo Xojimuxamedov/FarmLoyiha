@@ -99,13 +99,33 @@ window.addEventListener("click", (e) => {
 });
 
 let hamburger = document.querySelector(".headerup-second-hamburgerMenu");
-let nav = document.querySelector(".headerup-second-navbar")
+let nav = document.querySelector(".headerup-second-navbar");
+
+let ower = true;
 
 hamburger.addEventListener("click", () => {
-  nav.classList.toggle("headerup-second-navbar-active")
-  hamburger.classList.toggle("active")
+  nav.classList.toggle("headerup-second-navbar-active");
+  hamburger.classList.toggle("active");
+  if (ower) {
+    document.body.style.overflow = "hidden";
+    ower = false;
+  } else {
+    document.body.style.overflow = "";
+    ower = true;
+  }
 });
 
+nav.addEventListener('click', () => {
+  nav.classList.remove("headerup-second-navbar-active")
+  hamburger.classList.remove("active");
+  if (ower) {
+    document.body.style.overflow = "hidden";
+    ower = false;
+  } else {
+    document.body.style.overflow = "";
+    ower = true;
+  }
+})
 
 
 // data
@@ -146,10 +166,11 @@ fetch(URL)
 
     formattedData.reverse().forEach((e, i) => {
       newsImg[i].src = e.img;
-      newsTitle[i].innerHTML = e.title;
+      if (e.title.length > 80)
+        newsTitle[i].innerHTML = e.title.slice(0, 80) + "...";
+      else newsTitle[i].innerHTML = e.title;
       newsText[i].innerHTML = e.text;
       newsDate[i].innerHTML = e.date;
     });
   })
   .catch((error) => console.error("Xatolik:", error));
-

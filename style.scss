@@ -28,8 +28,10 @@ $mobile: 475px;
 
 .pt-150 {
   padding-top: 150px;
+  @media (max-width: $mobile) {
+    padding-top: 40px;
+  }
 }
-
 
 .font-blue {
   color: $titleBlue;
@@ -38,6 +40,9 @@ $mobile: 475px;
 .title {
   font-weight: 600;
   font-size: 40px;
+  @media (max-width: $mobile) {
+    font-size: 32px;
+  }
 }
 
 @mixin grid($column, $row, $columngap, $rowgap) {
@@ -102,7 +107,7 @@ $mobile: 475px;
       display: none; // Desktopda yashirish
       flex-direction: column;
       cursor: pointer;
-      z-index: 1000;
+      z-index: 10;
       @media (max-width: $mobile) {
         display: block;
       }
@@ -204,13 +209,11 @@ $mobile: 475px;
   &-item {
     min-width: 100%;
     width: 100%;
-    height: 80vh;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     @media (max-width: $mobile) {
-      height: 35vh;
     }
     img {
       display: block;
@@ -374,53 +377,14 @@ $mobile: 475px;
   }
 }
 
-.product {
-  padding-top: 160px;
-  &-items {
-    display: flex;
-    margin-top: 50px;
-    justify-content: space-between;
-  }
-  &-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-
-    border: 1px $black solid;
-    border-radius: 20px;
-
-    padding: 25px;
-
-    max-width: 300px;
-    height: 400px;
-    position: relative;
-
-    &-img {
-      max-width: 100%;
-      max-height: 100%;
-      max-height: 315px;
-      display: block;
-      margin: 0 auto;
-    }
-    &-name {
-      font-size: 16px;
-      font-weight: bold;
-      margin-top: 15px;
-    }
-    &-more {
-      margin-top: 10px;
-      font-size: 14px;
-      font-weight: 600;
-      color: $titleBlack;
-    }
-  }
-}
-
 .path {
-  padding-top: 160px;
   &-items {
     margin-top: 50px;
     @include grid(2, 2, 20, 20);
+    @media (max-width: $mobile) {
+      @include grid(1, 4, 20, 20);
+      margin-top: 20px;
+    }
   }
   &-item {
     background-position: center;
@@ -461,11 +425,19 @@ $mobile: 475px;
   width: 700px;
   border-radius: 20px;
 
+  @media (max-width: $mobile) {
+    width: 80%;
+  }
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 5;
+  z-index: 12;
   &-up {
+    @media (max-width: $mobile) {
+      padding: 20px 20px;
+      height: 140px;
+    }
     background-image: url(./img/Clip-path-group-2.svg);
     height: 160px;
     background-position: center;
@@ -477,10 +449,19 @@ $mobile: 475px;
   }
   &-text {
     padding: 30px 50px;
+    font-size: 16px;
+    text-align: justify;
+    @media (max-width: $mobile) {
+      padding: 15px 20px;
+      font-size: 14px;
+    }
   }
   &-title {
     color: $white;
     font-size: 36px;
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
   }
   &-out {
     position: fixed;
@@ -488,26 +469,39 @@ $mobile: 475px;
     height: 100vh;
     backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.2);
-    z-index: 4;
+    z-index: 15;
   }
 }
 
 .homeAbout {
-   &-inner{
+  &-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 40px;
+    }
   }
   &-subtitle {
     margin-top: 25px;
     font-size: 24px;
     font-weight: 600;
+    @media (max-width: $mobile) {
+      font-size: 20px;
+      margin-top: 20px;
+    }
   }
   &-text {
     line-height: 28px;
     font-weight: 400;
     margin-top: 15px;
+    text-align: justify;
     width: 700px;
+    @media (max-width: $mobile) {
+      width: 100%;
+      margin-top: 10px;
+    }
   }
   &-link {
     font-size: 18px !important;
@@ -515,34 +509,56 @@ $mobile: 475px;
     letter-spacing: 2px;
     display: block;
     width: min-content;
+    @media (max-width: $mobile) {
+      font-size: 14px !important;
+      letter-spacing: 1px;
+    }
   }
   &-right {
-    width: 750px ;
+    width: 750px;
     height: 500px;
     background-image: url(./img/2009.jpg);
+    @media (max-width: $mobile) {
+      width: Calc(100% + 30px);
+    }
   }
 }
 
 .contact-middle {
   padding-top: 160px;
+  @media (max-width: $mobile) {
+    padding-top: 140px;
+  }
   &-inner {
     background-image: url(./img/Rectangle.jpg);
     background-size: cover;
+    background-position: center;
     height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media (max-width: $mobile) {
+      height: 450px;
+    }
   }
 
   &-title {
     font-size: 48px;
     color: $white;
+    text-align: center;
+    @media (max-width: $mobile) {
+      font-size: 36px;
+    }
   }
   &-text {
+    text-align: center;
     margin-top: 15px;
     color: $white;
     font-size: 28px;
+    @media (max-width: $mobile) {
+      font-size: 22px;
+    }
   }
   &-links {
     margin-top: 50px;
@@ -550,6 +566,10 @@ $mobile: 475px;
     gap: 20px;
   }
   &-link {
+    @media (max-width: $mobile) {
+      width: 140px;
+      height: 140px;
+    }
     display: flex;
     align-items: center;
     justify-content: center;
@@ -563,13 +583,19 @@ $mobile: 475px;
   &-icon {
     transform: scale(2.8);
     color: $white;
+    @media (max-width: $mobile) {
+      transform: scale(2);
+    }
   }
 }
 
 .news {
-  padding-top: 160px;
   &-items {
     @include grid(2, 2, 30, 30);
+    @media (max-width: $mobile) {
+      @include grid(1, 4, 30, 30);
+      margin-top: 20px !important;
+    }
   }
   &-item {
     display: flex;
@@ -577,19 +603,36 @@ $mobile: 475px;
     padding-bottom: 10px;
     border-bottom: 1px dashed $black;
     position: relative;
+    @media (max-width: $mobile) {
+      flex-direction: row-reverse;
+      padding-bottom: 6px;
+      gap: 10px;
+      justify-content: space-between;
+    }
     &-img {
-      display: block;
+      // display: block;
       width: 200px;
       height: 170px;
       background-size: cover;
       background-position: center;
+      @media (max-width: $mobile) {
+        max-width: 140px;
+        max-height: 90px;
+      }
     }
     &-title {
+      @media (max-width: $mobile) {
+        margin-top: 0px;
+        font-size: 15px;
+      }
       margin-top: 8px;
       font-size: 18px;
       font-weight: bold;
     }
     &-subtitle {
+      @media (max-width: $mobile) {
+        display: none;
+      }
       margin-top: 15px;
       font-size: 16px;
       font-weight: 500;
@@ -601,23 +644,12 @@ $mobile: 475px;
   }
 }
 
-.certificate {
-  padding-top: 160px;
-  &-items {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-  }
-  &-item {
-    img {
-      width: 230px;
-    }
-  }
-}
-
 .map {
   &-location {
     padding-top: 160px;
+    @media (max-width: $mobile) {
+      padding-top: 40px;
+    }
   }
 }
 
@@ -637,31 +669,49 @@ $mobile: 475px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 14px;
     &-img {
       position: absolute;
       top: -200px;
       width: 70px;
       height: 70px;
+      @media (max-width: $mobile) {
+        top: -180px;
+        width: 50px;
+        height: 50px;
+      }
     }
     &-tels {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 15px;
     }
     &-tel {
       color: $white;
       font-size: 18px;
       font-weight: 600;
+      text-align: center;
+      @media (max-width: $mobile) {
+        font-size: 12px;
+      }
+    }
+    &-location {
+      @media (max-width: $mobile) {
+        font-size: 14px;
+        width: 100%;
+      }
     }
   }
   &-container {
     max-width: 1120px;
-    width: 100%;
-    padding: 20px 15px 120px;
+    width: 90%;
+    padding: 40px 15px 120px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @media (max-width: $mobile) {
+      padding-top: 30px;
+    }
   }
   &-line {
     height: 10px;
@@ -673,6 +723,9 @@ $mobile: 475px;
     justify-content: center;
     gap: 10px;
     a {
+      @media (max-width: $mobile) {
+        font-size: 14px;
+      }
       font-size: 18px;
       color: $white;
       font-weight: 500;
@@ -683,15 +736,26 @@ $mobile: 475px;
     flex-direction: column;
     align-items: start;
     gap: 3px;
+    @media (max-width: $mobile) {
+      gap: 5px;
+    }
     &-inner {
       display: flex;
       align-items: center;
       gap: 5px;
       p {
+        @media (max-width: $mobile) {
+          font-size: 13px;
+        }
         color: $white;
         font-weight: 600;
       }
       i {
+        @media (max-width: $mobile) {
+          transform: scale(0.7);
+          height: 20px;
+          width: 20px;
+        }
         display: flex;
         align-items: center;
         justify-content: center;

@@ -1,10 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 html {
   scroll-behavior: smooth;
 }
-
-// body{
-//   position: relative;
-// }
 
 * {
   margin: 0;
@@ -26,9 +24,12 @@ $titleBlack: #000;
 $white: #fff;
 $titleBlue: #1e8ab1;
 
+$mobile: 475px;
+
 .pt-150 {
   padding-top: 150px;
 }
+
 
 .font-blue {
   color: $titleBlue;
@@ -50,7 +51,7 @@ $titleBlue: #1e8ab1;
 
 .container {
   max-width: 1520px;
-  width: 100%;
+  width: calc(100% - 30px);
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -61,6 +62,11 @@ $titleBlue: #1e8ab1;
     align-items: center;
     justify-content: space-between;
     padding: 5px 0;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 2px;
+      padding: 10px 0;
+    }
     &-outside {
       background: $titleBlue;
     }
@@ -68,6 +74,10 @@ $titleBlue: #1e8ab1;
       color: $white;
       font-size: 16px;
       font-weight: 700;
+      @media (max-width: $mobile) {
+        font-size: 12px;
+        text-align: center;
+      }
     }
     &-mail {
       display: flex;
@@ -75,6 +85,9 @@ $titleBlue: #1e8ab1;
       gap: 10px;
     }
     &-mailText {
+      @media (max-width: $mobile) {
+        font-size: 12px;
+      }
       color: $white;
       font-size: 16px;
       font-weight: 400;
@@ -84,6 +97,36 @@ $titleBlue: #1e8ab1;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    &-hamburgerMenu {
+      display: none; // Desktopda yashirish
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 1000;
+      @media (max-width: $mobile) {
+        display: block;
+      }
+
+      &-line {
+        width: 25px;
+        height: 3px;
+        background-color: $white;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+      }
+
+      &.active {
+        .headerup-second-hamburgerMenu-line:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+        .headerup-second-hamburgerMenu-line:nth-child(2) {
+          opacity: 0;
+        }
+        .headerup-second-hamburgerMenu-line:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+        }
+      }
+    }
     &-outside {
       background: $blue;
     }
@@ -91,21 +134,53 @@ $titleBlue: #1e8ab1;
       display: flex;
       align-items: center;
       gap: 15px;
+      @media (max-width: $mobile) {
+        padding: 5px 0;
+      }
     }
     &-logoImg {
       img {
+        @media (max-width: $mobile) {
+          width: 35px;
+          height: 35px;
+        }
         width: 70px;
         height: 70px;
       }
     }
     &-title {
+      @media (max-width: $mobile) {
+        font-size: 16px;
+      }
       color: $white;
       font-size: 26px;
     }
     &-navbar {
+      @media (max-width: $mobile) {
+        flex-direction: column;
+        position: fixed;
+        z-index: 5;
+        right: -100px;
+        top: 20px;
+      }
+      &-active {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+
+        background-color: $blue;
+        width: 100%;
+        height: 100vh;
+        padding-top: 35vh;
+      }
       display: flex;
       align-items: center;
       a {
+        @media (max-width: $mobile) {
+          font-size: 12px;
+          padding: 20px 14px;
+        }
         padding: 30px 14px;
         font-size: 18px;
         color: $white;
@@ -116,6 +191,7 @@ $titleBlue: #1e8ab1;
     }
   }
 }
+
 .carousel {
   position: relative;
   overflow: hidden;
@@ -133,6 +209,9 @@ $titleBlue: #1e8ab1;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: $mobile) {
+      height: 35vh;
+    }
     img {
       display: block;
       height: 100%;
@@ -155,6 +234,9 @@ $titleBlue: #1e8ab1;
   border: none;
   cursor: pointer;
   border-radius: 50%;
+  @media (max-width: $mobile) {
+    display: none;
+  }
 }
 
 .carousel-control-prev {
@@ -171,14 +253,27 @@ $titleBlue: #1e8ab1;
   gap: 60px;
   align-items: center;
   justify-content: center;
-
   padding: 30px 0;
   background: $blue;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    gap: 7px;
+    padding: 15px 0;
+  }
   p {
+    @media (max-width: $mobile) {
+      font-size: 15px;
+    }
     font-size: 20px;
     color: $white;
   }
   &-link {
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      padding: 3px 14px;
+      border-radius: 5px;
+    }
     font-weight: 600;
     font-size: 18px;
     background: $white;
@@ -196,6 +291,10 @@ $titleBlue: #1e8ab1;
     backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.2);
     z-index: 4;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
   }
   &-out {
     position: fixed;
@@ -205,6 +304,11 @@ $titleBlue: #1e8ab1;
     z-index: 5;
     ///////
     &-inner {
+      @media (max-width: $mobile) {
+        flex-direction: column;
+        padding: 15px 25px;
+        width: 300px;
+      }
       background: lightblue;
       border-radius: 20px;
       display: flex;
@@ -215,7 +319,6 @@ $titleBlue: #1e8ab1;
       padding: 30px 50px;
       background: $blueBgHover;
     }
-
     &-tels {
       display: flex;
       flex-direction: column;
@@ -232,13 +335,21 @@ $titleBlue: #1e8ab1;
       }
     }
     &-info {
+      @media (max-width: $mobile) {
+        width: 100%;
+      }
       font-size: 16px;
       color: $white;
       width: 250px;
       margin-bottom: 15px;
     }
-
     &-socials {
+      @media (max-width: $mobile) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+      }
       display: flex;
       flex-direction: column;
       gap: 15px;
@@ -249,7 +360,13 @@ $titleBlue: #1e8ab1;
       display: flex;
       align-items: center;
       gap: 10px;
+      @media (max-width: $mobile) {
+        gap: 4px;
+      }
       p {
+        @media (max-width: $mobile) {
+          font-size: 12px;
+        }
         font-size: 16px;
         color: $white;
       }
